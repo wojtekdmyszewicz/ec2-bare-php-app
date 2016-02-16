@@ -1,5 +1,5 @@
 {
-    "family": "wordpress-app",
+    "family": "wordpress-app-family",
     "volumes": [
         {
             "name": "my-vol",
@@ -9,7 +9,7 @@
     "containerDefinitions": [
         {
             "environment": [],
-            "name": "simple-app",
+            "name": "wordpress-app",
             "image": "wojtekdmyszewicz/php",
             "cpu": 10,
             "memory": 500,
@@ -21,8 +21,8 @@
             ],
             "mountPoints": [
                 {
-                    "sourceVolume": "my-vol",
-                    "containerPath": "/var/www/my-vol"
+                    "sourceVolume": "",
+                    "containerPath": "/var/www/"
                 }
             ],
             "entryPoint": [
@@ -39,7 +39,7 @@
             "memory": 500,
             "volumesFrom": [
             {
-              "sourceContainer": "simple-app"
+              "sourceContainer": "wordpress-app"
             }
             ],
             "entryPoint": [
@@ -47,7 +47,7 @@
                 "-c"
             ],
             "command": [
-                "/bin/sh -c \"while true; do /bin/date > /var/www/my-vol/date; sleep 1; done\""
+                "/bin/sh -c \"while true; do /bin/date > /var/www/date; sleep 1; done\""
             ],
             "essential": false
         }
