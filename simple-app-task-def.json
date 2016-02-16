@@ -1,5 +1,5 @@
 {
-    "family": "console-sample-app",
+    "family": "wordpress-app",
     "volumes": [
         {
             "name": "my-vol",
@@ -10,7 +10,7 @@
         {
             "environment": [],
             "name": "simple-app",
-            "image": "amazon/amazon-ecs-sample",
+            "image": "wojtekdmyszewicz/php",
             "cpu": 10,
             "memory": 500,
             "portMappings": [
