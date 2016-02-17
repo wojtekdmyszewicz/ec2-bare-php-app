@@ -16,5 +16,5 @@ Open a browser and point to the server that is running Docker and hosting your c
 If you are using boot2docker on a Windows or Mac computer, find the IP address of the VirtualBox VM that is hosting Docker with the boot2docker ip command.
 
 example:
-$ boot2docker ip
-192.168.59.103
+`$ boot2docker ip
+192.168.59.103`
