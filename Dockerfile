@@ -34,7 +34,8 @@ RUN useradd -m -d /home/wordpress -p $(openssl passwd -1 'temp') -G sudo -s /bin
 RUN ln -s /usr/share/nginx/www /home/wordpress/www
 
 # SSH security, turn off root login
-RUN sed -i -e "s/PermitRootLogin\syes/PermitRootLogin no/g" /etc/ssh/sshd_config
+# RUN sed -i -e "s/PermitRootLogin\syes/PermitRootLogin yes/g" /etc/ssh/sshd_config
+RUN echo "IdentityFile ~/.ssh/id_rsa" >> /etc/ssh/ssh_config
 
 # Install Wordpress
 ADD http://wordpress.org/latest.tar.gz /usr/share/nginx/latest.tar.gz
