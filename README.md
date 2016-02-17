@@ -11,7 +11,8 @@ The -p 80:80 option maps the exposed port 80 on the container to port 80 on the 
 
 docker run -p 80:80 local-wordpress-image
 
-## Open a browser and point to the server that is running Docker and hosting your container.
+Open a browser and point to the server that is running Docker and hosting your container.
+
 If you are using boot2docker on a Windows or Mac computer, find the IP address of the VirtualBox VM that is hosting Docker with the boot2docker ip command.
 
 example:
